@@ -19,38 +19,31 @@ public class MusicTest
     /**
      * Default constructor for test class TestMusic
      */
-    public MusicTest()
-    {
+    public MusicTest() {
     }
     /**
      * Sets up the test fixture.
-     *
      * Called before every test case method.
      */
     @BeforeEach
-    public void setUp()
-    {
+    public void setUp() {
         music = new Music("Love Story", 2021);
     }
 
     @Test
     public void testAge(){
-
         Music SymphonyNo5 = new Music();
         SymphonyNo5.setEdition(1804);
         int result = SymphonyNo5.howOldAreYou();
         assertEquals(219, result);
-
     }
 
     @Test
     public void testAgeFailed(){
-
         Music SymphonyNo5 = new Music();
         SymphonyNo5.setEdition(1804);
         int result = SymphonyNo5.howOldAreYou();
         assertEquals(220, result);
-
     }
 
     @Test
@@ -87,14 +80,10 @@ public class MusicTest
     @Test
     public void testValidateEditionException() {
         Music music = new Music("Test Song", 2010);
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            music.validateEdition(-1);
-        }, "The validateEdition method should throw an IllegalArgumentException for invalid edition years.");
+        assertThrows(IllegalArgumentException.class, () -> music.validateEdition(-1), "The validateEdition method should throw an IllegalArgumentException for invalid edition years.");
     }
     /**
      * Tears down the test fixture.
-     *
      * Called after every test case method.
      */
     @AfterEach

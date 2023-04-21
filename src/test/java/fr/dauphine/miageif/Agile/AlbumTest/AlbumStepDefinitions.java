@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AlbumStepDefinitions {
     private Album album;
-    private Music music;
 
     @Given("I have an empty album")
     public void i_have_an_empty_album() {
@@ -19,7 +18,7 @@ public class AlbumStepDefinitions {
 
     @When("I add a music track with title {string} and edition {int}")
     public void i_add_a_music_track_with_title_and_edition(String title, int edition) {
-        music = new Music(title, edition);
+        Music music = new Music(title, edition);
         album.addMusicTrack(music);
     }
 

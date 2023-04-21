@@ -10,15 +10,14 @@ import org.junit.jupiter.api.Test;
 
 /**
  * The test class TestYearAfterAwards.
- *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author  Yufei&Qilian
+ * @version 20/04/2023
  */
 public class AwardTest {
     Music baby = new Music();
     Award worstSongAwards = new Award();
     /**
-     * Default constructor for test class TestYearAfterAwards
+     * Default constructor for test class AwardTest
      */
     public AwardTest()
     {
@@ -26,17 +25,14 @@ public class AwardTest {
 
     /**
      * Sets up the test fixture.
-     *
      * Called before every test case method.
      */
     @BeforeEach
-    public void setUp()
-    {
+    public void setUp() {
         baby.setWorstSongAwards(worstSongAwards);
         worstSongAwards.setMusic(baby);
         worstSongAwards.setYear(2013);
         baby.setEdition(2010);
-
     }
 
     @Test
@@ -58,10 +54,8 @@ public class AwardTest {
         assertEquals(award, music.getWorstSongAwards(), "The Music object should have the correct Award object associated.");
     }
 
-
     /**
      * Tears down the test fixture.
-     *
      * Called after every test case method.
      */
     @AfterEach

@@ -8,4 +8,3 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/features/music_streaming.feature")
 public class MusicStreamingTest {
 }
-
