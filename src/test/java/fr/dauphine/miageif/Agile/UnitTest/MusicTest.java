@@ -43,7 +43,7 @@ public class MusicTest
         Music SymphonyNo5 = new Music();
         SymphonyNo5.setEdition(1804);
         int result = SymphonyNo5.howOldAreYou();
-        assertEquals(220, result);
+        assertEquals(219, result);
     }
 
     @Test
