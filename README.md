@@ -1,4 +1,4 @@
-# Music Streaming Service Functional Tests
+# Music Java Unit Test and Functional Test
 
 This project demonstrates the implementation of functional tests for a music streaming service using Cucumber and JUnit.
 
