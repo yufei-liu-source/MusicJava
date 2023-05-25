@@ -7,7 +7,7 @@ package fr.dauphine.miageif.Agile;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Music
+public class Music implements Observer
 {
     // 2 attributs
     private String nom;
@@ -15,6 +15,9 @@ public class Music
 
     //reference of class Awards
     private Award worstSongAwards;
+
+    private String albumName;
+
 
     /**
      * Constructor for objects of class Music
@@ -69,6 +72,20 @@ public class Music
 
     public void setWorstSongAwards(Award worstSongAwards){
         this.worstSongAwards = worstSongAwards;
+    }
+
+    @Override
+    public void update(String albumName) {
+        this.albumName = albumName;
+        System.out.println("Music: " + nom + " from " + edition + " now belongs to Album: " + albumName);
+    }
+
+    public String getAlbumName() {
+        return albumName;
+    }
+
+    public void setAlbumName(String albumName) {
+        this.albumName = albumName;
     }
 }
 
